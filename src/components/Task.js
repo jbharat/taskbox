@@ -1,8 +1,13 @@
 import React from 'react';
 import { string, shape, func } from 'prop-types';
 
-const Task = ({ task: { id, title, state }, onArchiveTask, onPinTask }) => {
+/**
+ * Use `Task` to show how awesome task is.
+ * Some more description here.
+ * Some more.
+ */
 
+const Task = ({ task: { id, title, state }, onArchiveTask, onPinTask }) => {
   return (
     <div className={`list-item ${state}`}>
       <label className="checkbox">
@@ -33,11 +38,6 @@ const Task = ({ task: { id, title, state }, onArchiveTask, onPinTask }) => {
       </div>
     </div>
   );
-  // return (
-  //   <div className="list-item">
-  //     <input type="text" value={title} readOnly={true}/>
-  //   </div>
-  // )
 };
 
 Task.propTypes = {
